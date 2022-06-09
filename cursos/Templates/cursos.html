@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% for c in cursos %}
+<a href="/estudiantes/{{c.id}}" class="btn btn-primary">Ir al curso</a>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{c.titulo}}</h5>
+      <p class="card-text">duracion: {{c.duracion}} meses</p>
+      
+    </div>
+  </div>
+  {% endfor %}
+
+  {% endblock %}
